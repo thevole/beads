@@ -333,6 +333,11 @@ func (sm *SnapshotManager) BuildIDToTimestampMap(path string) (map[string]time.T
 
 // Private helper methods
 
+// getVersion returns the current bd version.
+func getVersion() string {
+	return Version
+}
+
 func (sm *SnapshotManager) createMetadata() snapshotMetadata {
 	return snapshotMetadata{
 		Version:   getVersion(),
